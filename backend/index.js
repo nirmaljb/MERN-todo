@@ -1,10 +1,12 @@
 const express = require('express')
 const { inputMiddleWare, idMiddleWare } = require("./middlewares/inputValidation")
 const Todo = require('./db')
+const cors = require('cors')
 const app = express()
 
 const PORT = 3000
 app.use(express.json())
+app.use(cors())
 
 // let todos = []
 

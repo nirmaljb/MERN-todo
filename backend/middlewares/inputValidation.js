@@ -6,7 +6,8 @@ function inputMiddleWare(req, res, next) {
 
     if(!parsedPayLoad.success) {
         return res.status(411).json({
-            msg: 'Invalid inputs'
+            msg: 'Invalid inputs',
+            error: parsedPayLoad.error
         })
     }
     next()
